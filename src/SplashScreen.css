@@ -1,0 +1,34 @@
+/* SplashScreen.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+  
+#root {
+    height: 100%;
+}
+  
+.splash-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #7AC74F, #8BC34A);
+    flex-direction: column;
+}
+  
+.logo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+}
+  
+.text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+  
