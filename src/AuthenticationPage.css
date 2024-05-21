@@ -1,0 +1,43 @@
+.authentication {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #7AC74F, #8BC34A);
+    padding: 20px;
+}
+  
+h1 {
+    margin-bottom: 20px;
+}
+  
+p {
+    margin-bottom: 30px;
+}
+  
+button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button.selected {
+    background-color: #8bc34a7e;
+    color: white;
+}
+  
+.send-code-button {
+    background-color: black;
+    color: white;
+    border: none;
+}
+  
+.send-code-button:hover {
+    background-color: #113100;
+}
+  

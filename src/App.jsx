@@ -4,6 +4,8 @@ import SplashScreen from './SplashScreen';
 import WelcomeScreen from './WelcomeScreen';
 import LoginPage from './LoginPage';
 import SignUpPage from './SignUpPage';
+import AuthenticationPage from './AuthenticationPage';
+import ConfirmationPage from './ConfirmationPage';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -22,6 +24,8 @@ function App() {
           <Route path="/" element={<WelcomeScreen />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/authentication" element={<AuthenticationPage />} />
+          <Route path="/confirmation" element={<ConfirmationPage />} />
         </Routes>
       )}
     </Router>

@@ -8,15 +8,16 @@ function SignUpPage() {
     fullName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    phoneNumber: ''
   });
-
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
@@ -26,36 +27,37 @@ function SignUpPage() {
     if (!formData.email) formErrors.email = 'Email address is required';
     if (!formData.password) formErrors.password = 'Password is required';
     if (formData.password !== formData.confirmPassword) formErrors.confirmPassword = 'Passwords do not match';
+    if (!formData.phoneNumber) formErrors.phoneNumber = 'Phone number is required';
 
     setErrors(formErrors);
     return Object.keys(formErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
+  const checkUserExists = (email, phoneNumber) => {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    return users.some(user => user.email === email || user.phoneNumber === phoneNumber);
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.fullName,
-          email: formData.email,
-          password: formData.password
-        })
-      });
-
-      if (response.ok) {
-        navigate('/login');
-      } else {
-        console.error('Failed to create account');
-      }
-    } catch (error) {
-      console.error('Error:', error);
+    if (checkUserExists(formData.email, formData.phoneNumber)) {
+      setErrors({ ...errors, form: 'User with this email or phone number already exists' });
+      return;
     }
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const newUser = {
+      fullName: formData.fullName,
+      email: formData.email,
+      password: formData.password,
+      phoneNumber: formData.phoneNumber
+    };
+
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
+    navigate('/authentication', { state: { email: formData.email, phoneNumber: formData.phoneNumber } });
   };
 
   return (
@@ -68,52 +70,64 @@ function SignUpPage() {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="fullName">Full name</label>
-          <input 
-            type="text" 
-            id="fullName" 
-            name="fullName" 
-            value={formData.fullName} 
-            onChange={handleChange} 
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
           />
           {errors.fullName && <p className="error">{errors.fullName}</p>}
         </div>
         <div className="form-group">
           <label htmlFor="email">Email address</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            value={formData.email} 
-            onChange={handleChange} 
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
           />
           {errors.email && <p className="error">{errors.email}</p>}
         </div>
         <div className="form-group">
           <label htmlFor="password">Create password</label>
-          <input 
-            type="password" 
-            id="password" 
-            name="password" 
-            value={formData.password} 
-            onChange={handleChange} 
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
           />
           {errors.password && <p className="error">{errors.password}</p>}
         </div>
         <div className="form-group">
           <label htmlFor="confirmPassword">Confirm password</label>
-          <input 
-            type="password" 
-            id="confirmPassword" 
-            name="confirmPassword" 
-            value={formData.confirmPassword} 
-            onChange={handleChange} 
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
           />
           {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
         </div>
-        <p className="terms">By creating an account, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+        <div className="form-group">
+          <label htmlFor="phoneNumber">Phone number</label>
+          <input
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+          />
+          {errors.phoneNumber && <p className="error">{errors.phoneNumber}</p>}
+        </div>
+        <p>By creating an account, you agree to our <a href="#">Terms and Privacy Policy</a>.</p>
+        {errors.form && <p className="error">{errors.form}</p>}
         <button type="submit" className="submit-button">Create an account</button>
       </form>
-      <p className="login-redirect">Already have an account? <span onClick={() => navigate('/login')}>Login</span></p>
+      <p className="login-link">Already have an account? <span onClick={() => navigate('/login')}>Login</span></p>
     </div>
   );
 }

@@ -28,31 +28,22 @@ function LoginPage() {
     return Object.keys(formErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    // Simulate API call
-    try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/users');
-      const users = await response.json();
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find(user => user.email === formData.email && user.password === formData.password);
 
-      const user = users.find(
-        (user) => user.email === formData.email && user.username === formData.password // Assuming username as password for demo purposes
-      );
-
-      if (user) {
-        if (formData.rememberMe) {
-          localStorage.setItem('user', JSON.stringify(user));
-        } else {
-          sessionStorage.setItem('user', JSON.stringify(user));
-        }
-        navigate('/');
+    if (user) {
+      if (formData.rememberMe) {
+        localStorage.setItem('user', JSON.stringify(user));
       } else {
-        setErrors({ form: 'Invalid email or password' });
+        sessionStorage.setItem('user', JSON.stringify(user));
       }
-    } catch (error) {
-      console.error('Error:', error);
+      navigate('/');
+    } else {
+      setErrors({ form: 'Invalid email or password' });
     }
   };
 

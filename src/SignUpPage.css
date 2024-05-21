@@ -1,120 +1,120 @@
-/* Signup.css */
-
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-  }
-  
-  #root {
-    height: 100%;
-  }
-  
-  .signup {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    background: linear-gradient(to bottom, #7AC74F, #8BC34A);
-    padding: 20px;
-  }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .logo {
-    font-size: 4rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 10px;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    color: white;
-    margin: 10px 0;
-  }
-  
-  p {
-    color: white;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .error {
-    color: red;
-    font-size: 0.875rem;
-    margin-top: 5px;
-  }
-  
-  .terms {
-    font-size: 0.875rem;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .terms a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .submit-button {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-button:hover {
-    background-color: #333;
-  }
-  
-  .login-redirect {
-    margin-top: 20px;
-    font-size: 1rem;
-    text-align: center;
-  }
-  
-  .login-redirect span {
-    color: #215007;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* height: 100vh; */
+  background: linear-gradient(to bottom, #7AC74F, #8BC34A);
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header p {
+color: white;
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: white;
+  margin: 10px 0;
+}
+
+p {
+  color: black;
+  margin-bottom: 20px;
+}
+
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+input {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+.terms {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.terms a {
+  color: #333;
+  text-decoration: none;
+}
+
+.submit-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #8BC34A;
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.login-link span {
+  color: #fcfcfc;
+  cursor: pointer;
+  text-decoration: underline;
+}
