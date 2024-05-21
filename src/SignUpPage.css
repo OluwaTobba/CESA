@@ -1,0 +1,103 @@
+/* Signup.css */
+
+.signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #f7f7f7;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 360px;
+    width: 360px;
+    height: 220px;
+    padding: 40px 45px 24px 44px;
+    gap: 64px;
+    border-radius: 0px 0px 8px 8px;
+    opacity: 0px;
+    background: linear-gradient(to bottom, #7B8D66, #8BC34A);    
+  }
+  
+  .logo {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  
+  form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875rem;
+  }
+  
+  .terms {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .terms a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .submit-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .login-redirect {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .login-redirect span {
+    color: #7AC74F;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  

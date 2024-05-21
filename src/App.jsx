@@ -20,8 +20,8 @@ function App() {
       ) : (
         <Routes>
           <Route path="/" element={<WelcomeScreen />} />
-          <Route path="/LoginPage" element={<LoginPage />} />
-          <Route path="/SignUpPage" element={<SignUpPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
         </Routes>
       )}
     </Router>
