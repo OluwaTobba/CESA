@@ -1,0 +1,211 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  #root {
+    height: 100%;
+  }
+  
+  .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(to bottom, #7AC74F, #8BC34A);
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: white;
+    margin: 10px 0;
+  }
+  
+  h1 span {
+    font-weight: bold;
+  }
+  
+  p {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-options label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-options input {
+    margin-right: 5px;
+  }
+  
+  .forgot-password {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  
+  .submit-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #333;
+  }
+  
+  .or-login-with {
+    margin: 20px 0;
+    color: #333;
+    text-align: center;
+  }
+  
+  .social-login {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .google-button, .facebook-button {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .google-button img, .facebook-button img {
+    margin-right: 5px;
+  }
+  
+  .create-account {
+    margin-top: 20px;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .create-account span {
+    color: #fcfcfc;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  /* @media (max-width: 768px) {
+    .login {
+      padding: 10px;
+    }
+  
+    form {
+      padding: 20px;
+    }
+  
+    .logo {
+      font-size: 3rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login {
+      padding: 5px;
+    }
+  
+    form {
+      padding: 15px;
+    }
+  
+    .logo {
+      font-size: 2.5rem;
+    }
+  
+    h1 {
+      font-size: 1.2rem;
+    }
+  
+    p {
+      font-size: 0.8rem;
+    }
+  
+    .submit-button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  } */
+  
