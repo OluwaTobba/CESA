@@ -1,59 +1,71 @@
 /* Signup.css */
 
-.signup {
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  #root {
+    height: 100%;
+  }
+  
+  .signup {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    background: #f7f7f7;
+    background: linear-gradient(to bottom, #7AC74F, #8BC34A);
     padding: 20px;
   }
   
   .header {
     text-align: center;
     margin-bottom: 20px;
-    width: 360px;
-    width: 360px;
-    height: 220px;
-    padding: 40px 45px 24px 44px;
-    gap: 64px;
-    border-radius: 0px 0px 8px 8px;
-    opacity: 0px;
-    background: linear-gradient(to bottom, #7B8D66, #8BC34A);    
   }
   
   .logo {
     font-size: 4rem;
     font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
   }
   
   h1 {
     font-size: 2rem;
+    color: white;
     margin: 10px 0;
+  }
+  
+  p {
+    color: white;
+    margin-bottom: 20px;
   }
   
   form {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 90%;
     max-width: 400px;
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
   label {
     display: block;
     margin-bottom: 5px;
     color: #333;
+    font-weight: bold;
   }
   
   input {
-    width: 90%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -63,11 +75,13 @@
   .error {
     color: red;
     font-size: 0.875rem;
+    margin-top: 5px;
   }
   
   .terms {
     font-size: 0.875rem;
     color: #666;
+    margin-bottom: 20px;
   }
   
   .terms a {
@@ -85,18 +99,21 @@
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #333;
   }
   
   .login-redirect {
     margin-top: 20px;
-    margin-bottom: 50px;
-    color: #333;
     font-size: 1rem;
+    text-align: center;
   }
   
   .login-redirect span {
-    color: #7AC74F;
+    color: #215007;
     cursor: pointer;
     text-decoration: underline;
   }
